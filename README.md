@@ -7,7 +7,6 @@ Link to Video (Output demo at 10:45): [Project-Video](https://drive.google.com/f
 **Steps to Train the Model:**
 
 1. Clone this repo to a local directory  
-1. Unzip the dataset  
 1. Copy the .ipynb files to your notebook environment   
 1. Inside each notebook update the train\_path and test\_path variables to point to the dataset in your local directory.   
 1. You should now be able to run all cells, training, testing and, evaluating the model.
