@@ -1,4 +1,9 @@
 # Lung-Cancer-CNN-Classifier
+Link to Demo: [CNN-Demo](https://huggingface.co/spaces/matteopassalent/Custom-CNN)
+
+Link to Video (Output demo at 10:45): [Project-Video](https://drive.google.com/file/d/1nWwy_mWt3xbwxKnExhp7_wBN9CHjBimS/view?usp=sharing)
+
+
 **Steps to Train the Model:**
 
 1. Clone the [Lung-Cancer-CNN-Classifier](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier) repo to a local directory  
