@@ -1,7 +1,7 @@
 # Lung-Cancer-CNN-Classifier
-Link to Demo: [CNN-Demo](https://huggingface.co/spaces/matteopassalent/Custom-CNN)
+Link to Demos: [CNN-Demo](https://huggingface.co/spaces/matteopassalent/Custom-CNN), [Ensemble-Demo](https://huggingface.co/spaces/matteopassalent/Ensemble_Model)
 
-Link to Video (Output demo at 10:45): [Project-Video](https://drive.google.com/file/d/1nWwy_mWt3xbwxKnExhp7_wBN9CHjBimS/view?usp=sharing)
+Link to Video (Output demo at 10:45): [Project-Video](https://drive.google.com/file/d/1mh06lQYF8I6bWx_-xtluiABMCSUKdlo5/view?usp=sharing)
 
 
 **Steps to Train the Model:**
@@ -24,4 +24,4 @@ The train\_path and test\_path variables should now start with /content/Data
 Eg: train\_path \= "/content/Data/LungCancerCT/CTscans"
 
 **Testing the GUI:**  
-The [GUI](https://huggingface.co/spaces/matteopassalent/Custom-CNN) can be tested with any test image from the dataset. We provided two test images to try it out in the DropBox submission. The images can be uploaded to the GUI to see the results.
+The GUIs can be tested with any test image from the dataset. We provided two test images to try it out in the DropBox submission. The images can be uploaded to the GUI to see the results.
