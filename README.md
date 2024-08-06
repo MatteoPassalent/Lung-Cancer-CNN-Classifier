@@ -1,5 +1,7 @@
 **Using a CNN to Identify Lung Cancer from CT Images**
 
+Link to Demo: [CNN-Demo](https://huggingface.co/spaces/matteopassalent/Custom-CNN)
+
 **Abstract**  
 This report compares the performance of an ensemble model built from three adapted pre-trained models to an image classification CNN made from scratch. All models were trained and evaluated on a small dataset of approximately 1000 CT lung scans. They were assessed on their ability to perform binary classification by identifying each image as positive or negative for lung cancer. The three pre-trained models were developed to build an understanding of the problem and find the optimal configuration for the custom CNN.
 
