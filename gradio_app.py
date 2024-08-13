@@ -49,6 +49,7 @@ gr_interface = gr.Interface(
     inputs=gr.Image(type="pil"),
     outputs=["text", gr.Image(type="filepath")],
     title="Lung Cancer Detection",
-    description="Upload a CT scan image to predict whether it is positive or negative for lung cancer."
+    description="Upload a CT scan image to predict whether it is positive or negative for lung cancer.",
+    examples=["Malignant case (506).jpg", "Normal case (374).jpg"]
 )
 gr_interface.launch()
