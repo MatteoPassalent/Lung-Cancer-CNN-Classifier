@@ -23,13 +23,13 @@ Due to the model’s high accuracy and limited testing data, the final test accu
 Using the information gained from pre-trained models a convolutional model was built from scratch and fine-tuned for optimal performance on the dataset. The model architecture was intentionally kept small and simple, consisting of three convolutional layers followed by one fully connected layer. These layers had 16, 32, 64, and 256 nodes, respectively. This configuration proved sufficient for extracting the necessary features to accurately classify images, without overlearning specific features from the training data.  
 There was some speculation about whether regularization was necessary given the simplified model. The concern was that since the dense layer had only 256 nodes, adding L2 regularization and dropout might contribute to underfitting and prevent the model from learning the necessary patterns in the data. To address this, some testing was done to evaluate the impact of regularization on the model's performance.   
 The results reaffirmed the findings from the pre-trained models. Not only did the regularization techniques reduce overfitting, but they also improved the overall accuracy of the model on validation and testing data. The graphs below illustrate the enhanced generalization ability of the model with L2 regularization and dropout (right) compared to the same model without regularization techniques (left). The differences in the loss functions are particularly notable, highlighting the significant improvement achieved with regularization.  
-![][image1]![][image2]  
+![image1](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph1.jpg)![image2](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph2.jpg)  
 *Figure 1: Loss and accuracy for CNN with no regularization (left) and with L2 and dropout (right)*
 
 After implementing regularization techniques, the generalization gap decreased from 6.6% to 3.9%, comfortably below the target of 5%. Furthermore, the final testing accuracy increased from 81% to 98%, surpassing the target of 95% and highlighting the significant improvement in the model's overall performance.   
 	A deeper analysis of the final model's performance revealed a tendency to favour false positives when inaccuracies occurred. This bias towards false positives is preferable in the practical context of the problem at hand. The consequences of the model incorrectly classifying a healthy person as positive for cancer are significantly less severe than missing a true positive case. Therefore, the model's bias towards false positives aligns well with the priority of minimizing false negatives at all costs.   
 The graph below illustrates the confusion matrix and ROC curve of the final CNN evaluated on unseen test data. The confusion matrix shows near-perfect performance with a FN, and FP rate of 0% and 2% respectively. Additionally, the ROC curve, which reflects an AUC of 1.0, also highlights the model's performance. However, the ROC curve is less informative due to the 0% FN rate, resulting in a perfect TP rate and a straight-line representation.  
-![][image3]![][image4]  
+![image3](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph3.png)![image4](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph4.png)  
 *Figure 2: Confusion matrix and ROC curve of final CNN on test data*
 
 **Additional Discussions:**  
@@ -52,8 +52,10 @@ Non-deterministic Nature of Training:
 
 *Table 1: Comparison of training, validation, and testing accuracy for all five models*
 
+
+
 \* Note that the training and validation accuracy for the Custom CNN are significantly lower because it was built without leveraging pre-trained weights, resulting in a randomly initialized starting point and low accuracy for early epochs.
 
-![][image5]![][image6]  
+![image5](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph5.png)![image6](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph6.png)  
 *Figure 3: Confusion matrix and ROC curve of Ensemble Model on test data*
 
