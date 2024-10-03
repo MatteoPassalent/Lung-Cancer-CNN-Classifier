@@ -1,4 +1,4 @@
-**Using a CNN to Identify Lung Cancer from CT Images**
+### Using a CNN to Identify Lung Cancer from CT Images
 
 Link to Demo: [CNN-Demo](https://matteopassalent.ca/)
 
