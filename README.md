@@ -32,15 +32,15 @@ The graph below illustrates the confusion matrix and ROC curve of the final CNN 
 ![image3](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph3.png)![image4](https://github.com/MatteoPassalent/Lung-Cancer-CNN-Classifier/blob/main/report_images/graph4.png)  
 *Figure 2: Confusion matrix and ROC curve of final CNN on test data*
 
-**Additional Discussions:**  
-Optimizers:  
+### Additional Discussions:  
+**Optimizers:**  
 	RMSprop optimizer was used for the three pre-trained models. This optimizer was used in textbook examples and proved to be best for the pre-trained models. According to both online sources and textbook information, RMSprop is particularly suitable when the learning rate needs to be explicitly adjusted over multiple training epochs. For the pre-trained models, I started with a lower learning rate of 2e-5 for initial training on the dense layers. I then further lowered the learning rate to 1e-5 to fine-tune the top layers of the convolutional base. This lower learning rate helped ensure that the pre-trained weights were not significantly disrupted by large gradient updates.  
 	For the custom CNN, I chose the Adam optimizer. Adam is a modern optimization algorithm that combines the benefits of both RMSprop and the momentum optimizer. It is known for general-purpose effectiveness and performs well without explicitly setting and changing the learning rate.
 
-Non-deterministic Nature of Training:  
+**Non-deterministic Nature of Training:**  
 	During training and evaluation, I observed slight variations in the outcomes each time due to non-deterministic factors such as the random initialization of weights for new layers and the randomly applied data augmentations. In pre-trained models, this variability was minimal because the convolutional base used previously determined weights. However, for the custom CNN, every weight was randomly initialized and the differences in outcomes were more pronounced. Most of the time, these discrepancies averaged out, and the final model achieved the target of 95% testing accuracy with a generalization gap below 5%. Occasionally, the model would get stuck in a local maximum early in training, resulting in the validation accuracy remaining at 0.5769 from the first epoch to the 80th. I believe this occurred because if the model did not escape the local maximum early on, the optimizer's adjustments would gradually weaken, causing it to remain stuck indefinitely. This problem occurred rarely and was not a significant blocker, I simply restarted the training process when I noticed it was stuck.
 
-**Appendix**
+### Appendix:
 
 |  | Model |  |  |  |  |
 | :---: | :---: | :---: | :---: | :---: | :---: |
